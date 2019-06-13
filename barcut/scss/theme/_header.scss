@@ -1,0 +1,180 @@
+.logo {
+    text-align: center;
+    padding: 15px 0;
+    margin-right: 35px;
+    img {
+        width: 50%;
+        @media (max-width: 991px) {
+            width: 42%;
+        }
+        @media (max-width: 680px) {
+            width: 75%;
+        }
+        @media (max-width: 420px) {
+            width: 100%;
+        }
+    }
+    @media (max-width: 991px) {
+        position: absolute;
+        top: 9px;
+        padding: 0;
+        text-align: left;
+    }
+    @media (max-width: 420px) {
+        top: 12px;
+    }
+}
+
+.header-area {
+    position: relative;
+    background-color: $white;
+    width: 100%;
+    z-index: 999999;
+    @include transition();
+    @media (max-width: 991px) {
+        position: absolute;
+        box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+    }
+    .navbar {
+        padding: 0;
+        @media (max-width: 991px) {
+            padding: 20px 0;
+            max-width: 100px;
+            margin-left: auto;
+        }
+        .dropdown-item {
+            width: auto !important;
+            text-align: left;
+            font-size: 14px;
+            @media(max-width: 991px) {
+                text-align:right;
+                padding: 0.25rem;
+            }
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.header-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+
+@media (min-width: 992px) {
+    .dropdown .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 200ms ease-in;
+        -moz-transition: all 200ms ease-in;
+        -ms-transition: all 200ms ease-in;
+        -o-transition: all 200ms ease-in;
+        transition: all 200ms ease-in;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.menu-left {
+    text-align: center;
+    a {
+        margin-right: 22px;
+        color: $black;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 500;
+        @media(max-width: 991px) {
+            margin-right: 7px;
+        }
+        &:hover,
+        &.active {
+            color: $primary-color;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @media(max-width:991px) {
+        display: none;
+    }
+}
+
+.menu-right {
+    .nav-item {
+        .nav-link {
+            margin-right: 24px;
+            color: $black;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 37px 0px;
+            &:hover,
+            &.active {
+                color: $primary-color;
+            }
+            @media(max-width: 1199px) {
+                margin-right: 16px;
+            }
+            @media(max-width: 991px) {
+                padding: 10px 0;
+                margin-right: 7px;
+                letter-spacing: normal;
+            }
+        }
+        .dropdown-menu {
+            border-radius: 0;
+            margin-top: 0px;
+            border: none;
+            @media(max-width: 991px) {
+                margin-top:0px;
+            }
+            a {
+                display: block;
+                margin-bottom: 10px;
+                text-transform: capitalize;
+            }
+        }
+    }
+    @media(max-width: 1280px) and (min-width:799px) {
+        font-size: 11px;
+    }
+    @media(max-width:800px) {
+        font-size: 14px;
+    }
+    @media(max-width:991px) {
+        text-align: right;
+    }
+    .hide-lg {
+        display: none;
+        @media (max-width: 991px) {
+            display: block;
+        }
+    }
+}
+
+.default-header {
+    background-color: #fff;
+    padding: 20px 0;
+    width: 100% !important;
+    box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+
+.sticky-wrapper {
+    height: 48px !important;
+}

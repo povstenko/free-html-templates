@@ -1,0 +1,153 @@
+.section-gap {
+    padding: 120px 0;
+    @media (max-width: 991px) {
+        padding: 60px 0;
+    }
+}
+
+.section-gap-top {
+    padding-top: 120px;
+    @media (max-width: 991px) {
+        padding-top: 60px;
+    }
+}
+
+.gradient-bg {
+    @include gradient(90deg, $primary-color 0%, $primary-color2 100%);
+}
+
+.gradient-color {
+	@include gradient(90deg, $primary-color 0%, $primary-color2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+    padding-bottom: 80px;
+    @media (max-width: 991px) {
+        padding-bottom: 30px;
+    }
+    h1 {
+        margin-bottom: 15px;
+        font-size: 36px;
+        text-transform: capitalize;
+        @media (max-width: 991px) {
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        @media (max-width: 575px) {
+            font-size: 25px;
+        }
+        @include media-breakpoint-down (md) {
+            br {
+                display: none;
+            }
+        }
+    }
+    p {
+        margin-bottom: 0px;
+        @include media-breakpoint-down (md) {
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+.primary-btn {
+	display: inline-block;
+	@include gradient2(to right, $primary-color 0%, $primary-color2 51%, $primary-color 100%);
+    background-size: 200% auto;
+    padding: 0px 38px;
+    color: #fff;
+    font-family: $primary-font;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 50px;
+    border-radius: 50px;
+    border: 0;
+    outline: none !important;
+    box-shadow: 0px 10px 30px rgba(187, 146, 54, 0.3);
+    text-align: center;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+        background-position: right center;
+        color: #fff;
+        box-shadow: none;
+    }
+}
+
+/* Start Video Play css
+============================================================================================ */
+
+.video-play-button {
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    width: 32px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 46px 8px 18px 28px;
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include transform(translate(-50%, -50%));
+        display: block;
+        width: 60px;
+        height: 60px;
+        @extend .gradient-bg;
+        border-radius: 50%;
+    }
+    &:before {
+        z-index: 0;
+        @include animation(pulse-border 2000ms ease-out infinite);
+    }
+    &:after {
+        z-index: 1;
+        @include transition(all 200ms ease);
+    }
+    span {
+        display: block;
+        position: relative;
+        z-index: 3;
+        width: 0;
+        height: 0;
+        border-left: 16px solid #ffffff;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+    }
+    &:hover {
+        &:after {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+@include keyframes(pulse-border) {
+    0% {
+        @include transform(translate(-50%, -50%) translateZ(0) scale(1));
+        opacity: .7;
+    }
+    100% {
+        @include transform(translate(-50%, -50%) translateZ(0) scale(1.5));
+        opacity: 0.1;
+    }
+}
+/* End Video Play css
+============================================================================================ */
+
+/* Start Overlay css
+============================================================================================ */
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* End Overlay css
+============================================================================================ */

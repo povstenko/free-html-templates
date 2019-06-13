@@ -1,0 +1,846 @@
+/* Start Home Banner Area 
+============================================================================================ */
+
+.home-banner-area {
+    position: relative;
+    @media ( max-width: 991px) {
+        background: #eaeaea;
+        padding: 172px 20px 100px;
+    }
+    .no-js .owl-carousel,
+    .owl-carousel.owl-loaded {
+        @media ( max-width: 991px) {
+            display: none;
+        }
+    }
+    .text-wrapper {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        text-align: center;
+        z-index: 2;
+        color: #fff;
+        @media (max-width: 991px) {
+            width: 80%;
+            margin: auto;
+            color: $text-color;
+            position: static;
+            @include transform(translate(0%, 0%));
+        }
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+        h1 {
+            color: $white;
+            font-size: 60px;
+            @media (max-width: 1199px) {
+                font-size: 40px;
+            }
+            @media (max-width: 991px) {
+                color: $title-color;
+            }
+            @media ( max-width: 575px) {
+                font-size: 32px;
+            }
+        }
+        p {
+            margin: 25px 0;
+        }
+        br {
+            @include media-breakpoint-down (md) {
+                display: none;
+            }
+        }
+    }
+    .video-text {
+        p {
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.banner-img {
+    position: relative;
+    .overlay-bg {
+        background: rgba(0, 0, 0, .3);
+    }
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        z-index: 3;
+        width: 0;
+        height: 0;
+        border-right: 80px solid transparent;
+        border-left: 80px solid transparent;
+    }
+    &:after {
+        top: 15px;
+        border-top: 30px solid #ffffff;
+    }
+    &:before {
+        bottom: -15px;
+        border-bottom: 30px solid #ffffff;
+    }
+}
+
+/* End Home Banner Area 
+============================================================================================ */
+
+/* Start Banner Area 
+============================================================================================ */
+
+.banner-area {
+    min-height: 400px;
+    @media ( max-width: 991px) {
+        background: #eaeaea;
+    }
+    .banner-img {
+        img {
+            @media ( max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    color: #fff;
+    @media ( max-width: 991px) {
+        margin-top: 30px;
+    }
+    h1 {
+        color: $white;
+        font-size: 48px;
+        text-transform: capitalize;
+        @media ( max-width: 991px) {
+            color: $title-color;
+        }
+        @media ( max-width:414px) {
+            font-size: 30px;
+        }
+    }
+    .breadcrmb {
+        a {
+            color: #ffffff;
+            @media ( max-width: 991px) {
+                color: $text-color;
+            }
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        span {
+            color: #ffffff;
+            font-weight: 600;
+            margin: 0 10px;
+            @media ( max-width: 991px) {
+                color: $text-color;
+            }
+        }
+    }
+    p {
+        font-size: 14px;
+        text-transform: capitalize;
+        padding-top: 8px;
+        margin: 0;
+    }
+}
+
+/* End Banner Area 
+============================================================================================ */
+
+/* Start About Area css
+============================================================================================ */
+
+.about-area {
+    .single-about {
+        position: relative;
+        .bordered-img {
+            position: absolute;
+            right: 0;
+            bottom: -70px;
+            z-index: 5;
+            border: 1px dashed #b89035;
+            padding: 20px;
+            @media(max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+    .about-thumb {
+        overflow: hidden;
+        display: inline-block;
+    }
+    @media(max-width:800px) {
+        .info-content {
+            text-align: center;
+            padding: 80px 30px 80px 0;
+        }
+    }
+    .about-content {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 0;
+            z-index: 3;
+            background: rgba(#fff, .8);
+            width: 70px;
+            height: 100%;
+            @include media-breakpoint-down(md) {
+                width: 50px;
+            }
+            @include media-breakpoint-down(xs) {
+                display: none;
+            }
+            @media(max-width:991px) {
+                display: none;
+            }
+        }
+        background: rgba(#fff, .8);
+        padding: 60px 0px 60px 0px;
+        min-width: 480px;
+        @media only screen and (min-width: 992px) and (max-width: 1200px) {
+            min-width: 400px;
+        }
+        z-index: 5;
+        @include media-breakpoint-down(md) {
+            padding: 30px 30px 30px 0;
+        }
+        @include media-breakpoint-down(xs) {
+            padding: 30px;
+        }
+        h1 {
+            line-height: 1.15em;
+            margin-bottom: 30px;
+            @media (max-width: 991px) {
+                font-size: 25px;
+            }
+            @media (max-width: 575px) {
+                font-size: 25px;
+            }
+        }
+        p {
+            margin: 0;
+        }
+        .primary-btn {
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        @media(max-width:767px) {
+            min-width: 300px;
+        }
+    }
+    .about-right {
+        z-index: 2;
+    }
+}
+
+/* End About Area css
+============================================================================================ */
+
+/* Start Service Area css
+============================================================================================ */
+
+.service-area {
+    @media(max-width: 767px) {
+        .col-lg-3:last-child {
+            .single-service {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.single-service {
+    position: relative;
+    overflow: hidden;
+    h4 {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        background: rgba(#000, .3);
+        padding: 20px;
+        @include transition();
+    }
+    &:hover {
+        h4 {
+            background: #bb9236;
+        }
+    }
+    img {
+        width: 100%;
+        @include transition();
+    }
+    @media(max-width:767px) {
+        margin-bottom: 30px;
+    }
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* End Service Area css
+============================================================================================ */
+
+/* Start Catalogue Area css
+============================================================================================ */
+
+.catalogue-area {
+    background-image: url(../img/catalogue-bg.jpg);
+    background-size: cover;
+}
+
+.tab-area {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.tab-contact-wraper {
+    h4 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    p {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        color: #bb9236;
+        margin-bottom: 20px;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .jq-tab-menu {
+        .jq-tab-title {
+            background: #f9f9f9;
+            display: inline-block;
+            padding: 27px 32px;
+            @media(max-width: 767px) {
+                padding: 18px 22px;
+            }
+            @media only screen and (min-width: 992px) and (max-width: 1200px) {
+                padding: 18px 22px;
+            }
+            cursor: pointer;
+            &.active {
+                border-bottom: 1px solid #bb9236;
+                box-shadow: 0px 5px 15px rgba(187, 146, 54, 0.3);
+                background: #fff !important;
+            }
+            &.deff-bg1 {
+                background: #eeeeee;
+            }
+            &.deff-bg2 {
+                background: #fff;
+            }
+        }
+    }
+    .jq-tab-content-wrapper {
+        -webkit-box-flex: 4;
+        -ms-flex: 4;
+        flex: 4;
+        .jq-tab-content {
+            padding: 30px;
+            line-height: 26px;
+            padding-bottom: 0px;
+            display: none;
+            padding: 1em 1.8em;
+            font-size: 16px;
+            font-weight: 400;
+            .view-btn {
+                display: block;
+                margin-top: 30px;
+                text-transform: uppercase;
+                color: #000000;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 2px;
+                @include transition();
+                &:hover {
+                    color: #bb9236;
+                }
+            }
+            &.active {
+                display: block;
+            }
+        }
+        p {
+            text-transform: uppercse;
+        }
+    }
+}
+
+.horizontal-tab .jq-tab-menu {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    @media(max-width: 1200px) {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* End Catalogue Area css
+============================================================================================ */
+
+/* Start Team Area css
+============================================================================================ */
+
+.team-area {
+    @media(max-width: 767px) {
+        .col-lg-4:last-child {
+            .single-team-member {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.single-team-member {
+    .member-img {
+        overflow: hidden;
+        img {
+            @include transition();
+        }
+    }
+    .proff {
+        margin-top: 30px;
+        text-align: center;
+        @media(max-width: 767px) {
+            margin-top: 15px;
+        }
+        h4 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        p {
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+    }
+    @media(max-width:767px) {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    &:hover {
+        .member-img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+/* End Team Area css
+============================================================================================ */
+
+/* Testimonials Area css
+============================================================================================ */
+
+.testimonials-area {
+    position: relative;
+    background-image: url(../img/testimonial/testi-bg.jpg);
+    background-size: cover;
+    z-index: 1;
+    max-height: 535px;
+    .overlay-bg {
+        background: #000000;
+        opacity: .6;
+    }
+    .quote-img {
+        margin-bottom: -40px;
+        position: relative;
+        z-index: 2;
+    }
+    .owl-thumbs {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 40px;
+        @media (max-width: 991px) {
+            display: none !important;
+        }
+    }
+    .owl-thumb-item {
+        margin-right: 20px;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.active {
+            .overlay-grad {
+                @extend .gradient-bg;
+                opacity: .75;
+            }
+        }
+        .overlay-grad {
+            @include transition();
+            cursor: pointer;
+            border-radius: 50%;
+            &:hover {
+                @extend .gradient-bg;
+                opacity: .75;
+            }
+        }
+        img {
+            padding: 10px;
+            background: $white;
+            border-radius: 50px;
+        }
+    }
+    &.color-bg {
+        background: #f1f9ff;
+    }
+    .owl-carousel .owl-item {
+        img {
+            width: auto;
+            margin: auto;
+        }
+    }
+}
+
+.testi-slider {
+    margin: auto;
+    .testi-item {
+        text-align: center;
+    }
+}
+
+.testi-item {
+    margin-bottom: 70px;
+    color: #fff;
+    h4 {
+        font-size: 21px;
+        font-weight: 700;
+        margin-top: 65px;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+    .list {
+        margin-bottom: 35px;
+        li {
+            display: inline-block;
+            a {
+                color: #ffc000;
+                font-size: 14px;
+            }
+        }
+    }
+    p {
+        max-width: 735px;
+        margin: auto;
+        font-size: 21px;
+        line-height: 30px;
+        font-style: italic;
+        @media(max-width: 575px) {
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+}
+
+/* End Testimonials Area css
+============================================================================================ */
+
+/* Start Pricing Area css
+============================================================================================ */
+
+.price-area {
+    @media(max-width: 991px) {
+        .col-lg-4:last-child {
+            .single-price {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.single-price {
+    background: #f9f9f9;
+    padding: 40px 30px;
+    @include transition ();
+    .top-sec {
+        h4 {
+            font-weight: 700;
+            margin-bottom: 10px;
+            @include transition ();
+        }
+        p {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+    }
+    .bottom-sec {
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            font-family: $primary-font;
+            border-top: 1px dashed #bb9236;
+            border-bottom: 1px dashed #bb9236;
+            padding: 30px 0;
+            @include transition ();
+        }
+    }
+    .end-sec {
+        margin-top: 30px;
+        li {
+            padding: 10px;
+        }
+        .primary-btn.price-btn {
+            color: #fff;
+            background: #222;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 0 57px;
+            box-shadow: none;
+            @include transition ();
+        }
+    }
+    &:hover, &.active {
+        background: #222;
+        .top-sec {
+            h4 {
+                @extend .gradient-color;
+                text-shadow: 0 10px 30px rgba(187, 146, 54, 0.3);
+            }
+        }
+        .bottom-sec {
+            h1 {
+                @extend .gradient-color;
+                text-shadow: 0 10px 30px rgba(187, 146, 54, 0.3);
+            }
+        }
+        .end-sec {
+            .primary-btn.price-btn {
+                @extend .gradient-bg;
+                box-shadow: 0px 10px 30px rgba(187, 146, 54, 0.3);
+            }
+        }
+    }
+    @media(max-width:991px) {
+        margin-bottom: 30px;
+    }
+}
+
+/* End Pricing Area css
+============================================================================================ */
+
+/* Start Blog Area css
+============================================================================================ */
+
+.blog-area {
+    padding: 120px 0px 90px;
+    @media(max-width: 991px) {
+        padding: 60px 0px 30px;
+    }
+    @media(max-width: 767px) {
+        .col-lg-6:last-child {
+            .single-blog {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.single-blog {
+    padding: 20px;
+    background: #000000;
+    .blog-thumb {
+        overflow: hidden;
+        img {
+            @include transition();
+        }
+        @media(max-width:767px) {
+            margin-bottom: 30px;
+        }
+    }
+    .blog-details {
+        .blog-meta {
+            margin-bottom: 30px;
+            a {
+                padding-right: 20px;
+                color: $text-color;
+                i.fa {
+                    padding-right: 10px;
+                    color: #fff;
+                }
+            }
+        }
+        .blog-title {
+            margin-bottom: 20px;
+            color: #fff;
+            display: inline-block;
+        }
+    }
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+        .blog-title {
+            color: $primary-color;
+        }
+    }
+}
+
+/* End Blog Area css
+============================================================================================*/
+
+/* Start Gallery Area css
+============================================================================================*/
+
+.gallery-area {
+    padding: 120px 0 90px;
+    @media (max-width: 991px) {
+        padding: 60px 0 30px;
+    }
+}
+
+.filters-content {
+    .show {
+        opacity: 1;
+        visibility: visible;
+        @include transition();
+    }
+    .hide {
+        opacity: 0;
+        visibility: hidden;
+        @include transition();
+    }
+    .item {
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 30px;
+        img {
+            border-radius: 10px;
+        }
+    }
+}
+
+.single-gallery {
+    border-radius: 5px;
+    margin-bottom: 30px;
+    .thumb {
+        .overlay-bg {
+            @extend .gradient-bg;
+            opacity: 0;
+            border-radius: 5px;
+            @include transition();
+        }
+    }
+    .text {
+        color: $white;
+        font-size: 25px;
+        padding: 16px 32px;
+    }
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &:hover {
+        .thumb {
+            .overlay-bg {
+                opacity: .85;
+            }
+        }
+        .middle {
+            opacity: 1;
+        }
+    }
+}
+
+/* End Gallery Area css
+============================================================================================*/
+/* Start Contact Area css
+============================================================================================ */
+.contact-page-area {
+    background: #f9f9ff;
+    .map-wrap {
+        margin-bottom: 120px;
+        @media(max-width: 991px) {
+            margin-bottom: 50px;
+        }
+    }
+    .form-area {
+        .form-control{
+            &:focus{
+                box-shadow: none!important;
+                border-color:#ced4da!important;
+            }
+        }
+        input {
+            padding: 15px;
+            height: 40px;
+            line-height: 40px;
+        }
+        input,
+        textarea {
+            border-radius: 0;
+            font-size: 13px!important;
+        }
+        textarea {
+            height: 160px;
+            margin-top: 0px;
+            padding: 15px;
+        }
+        .form-group {
+            @media(max-width: 992px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .address-wrap{
+        @media(max-width:991px){
+            margin-bottom:30px;
+        }
+        .single-contact-address {
+            margin-bottom: 8px;
+            h5 {
+                font-weight: 600;
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+            .lnr {
+                font-size: 20px;
+                font-weight: 500;
+                color: $primary-color;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+/* ENd Contact Area css
+============================================================================================ */

@@ -1,0 +1,109 @@
+/* Footer Area css
+============================================================================================ */
+
+.footer-area {
+    background: #000000;
+}
+
+.footer-inner {}
+
+.f-widget {}
+
+.f-title {
+    margin-bottom: 35px;
+    @media (max-width: 991px) {
+        margin: 15px 0px;
+    }
+    h3 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 0px;
+        text-transform: capitalize;
+    }
+}
+
+.ab-widget {
+    p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 30px;
+        a {
+            color: $primary-color;
+        }
+        &+p {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.news-widget {
+    padding-left: 15px;
+    @media (max-width: 767px) {
+        padding-left: 0;
+    }
+    p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+    .input-group {
+        input {
+            height: 40px;
+            background: #252526;
+            border-radius: 0px;
+            width: 80%;
+            border: none;
+            padding: 0px 15px;
+            font-size: 14px;
+            color: #cccccc;
+            outline: none;
+            box-shadow: none;
+            @include placeholder {
+                font-size: 14px;
+                font-weight: normal;
+                color: #cccccc;
+            }
+        }
+        .sub-btn {
+            border-radius: 0px;
+            @extend .gradient-bg;
+            outline: none !important;
+            box-shadow: none !important;
+            padding: 0px;
+            width: 42px;
+            cursor: pointer;
+            color: #fff;
+        }
+    }
+}
+
+.social-widget {
+    p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+    .list {
+        li {
+            margin-right: 17px;
+            display: inline-block;
+            a {
+                color: #cccccc;
+                font-size: 14px;
+                @include transition;
+            }
+            &:last-child {
+                margin-right: 0px;
+            }
+            &:hover {
+                a {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+/* End Footer Area css
+============================================================================================ */
